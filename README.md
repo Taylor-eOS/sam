@@ -1,5 +1,7 @@
+**Script to use Segment Anything (SAM)**
+
 Install dependencies with `pip install -r requirements.txt`.
-Download the model from `https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth` and place it in the same folder as the script.
+Download the model from `https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth` (version name might have changed) and place it in the same folder as the script.
 Open your image and find the coordinates for the object you want to select.
 Run the script with `python sam.py input.jpg x0 y0 x1 y1`, replacing `input.jpg` with your image file and entering the bounding box coordinates as four integers: `x0` and `y0` for the top-left corner, `x1` and `y1` for the bottom-right corner.
 These define the rectangular area in which the model will select an object.
