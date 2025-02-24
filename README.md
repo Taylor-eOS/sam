@@ -1,5 +1,8 @@
-**Script to use Segment Anything (SAM)**
+**Python Script to create layer masks in [Segment Anything](https://huggingface.co/docs/transformers/model_doc/sam) (SAM)**
 
+![sam](https://github.com/user-attachments/assets/2e47564c-ead7-4c11-82bc-5382a133f15a)
+
+### **Instructions:**
 Install dependencies with `pip install -r requirements.txt`.
 Download the model from `https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth` (version name might have changed) and place it in the same folder as the script.
 Open your image and find the coordinates for the object you want to select. (Draw a box around it and hover your mouse over the boundaries.)
@@ -7,7 +10,7 @@ Run the script with `python sam.py input.jpg x0 y0 x1 y1`, replacing `input.jpg`
 These define the rectangular area in which the model will select an object.
 The script saves `segmentation_mask.png` in the same folder.
 
-To use your black-and-white segmentation mask as a layer mask in GIMP, follow these steps:
+To use your black-and-white segmentation mask in GIMP:
 1. **Open the Segmentation Mask Image**  
    - Open the black-and-white segmentation mask (`File > Open as Layers`) so it appears as a separate layer above your original image.
 2. **Copy the Mask Image**  
